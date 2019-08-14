@@ -46,7 +46,7 @@ class Reamaze_Reamaze_Helper_Data extends Mage_Core_Helper_Data {
   }
 
   public function getDomain() {
-    return 'lantirn.dev'; // Mage::getStoreConfig('reamaze_reamaze/domain');
+    return Mage::getStoreConfig('reamaze_reamaze/domain');
   }
 
   public function getUrlForPath($path = '/') {
