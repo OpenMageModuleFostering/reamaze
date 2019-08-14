@@ -59,7 +59,7 @@
       </action>
     </reference>
   </adminhtml_customer_edit>
-  <reamaze_reamaze_adminhtml_main_dashboard>
+  <adminhtml_reamaze_admin_dashboard>
     <reference name="head">
       <action method="addJs">
         <script>reamaze/jquery.min.js</script>
@@ -83,8 +83,8 @@
     <reference name="content">
       <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main" template="reamaze/reamaze/dashboard.phtml" />
     </reference>
-  </reamaze_reamaze_adminhtml_main_dashboard>
-  <reamaze_reamaze_adminhtml_main_reports>
+  </adminhtml_reamaze_admin_dashboard>
+  <adminhtml_reamaze_admin_reports>
     <reference name="head">
       <action method="addJs">
         <script>reamaze/jquery.min.js</script>
@@ -108,8 +108,8 @@
     <reference name="content">
       <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main" template="reamaze/reamaze/dashboard.phtml" />
     </reference>
-  </reamaze_reamaze_adminhtml_main_reports>
-  <reamaze_reamaze_adminhtml_main_kb>
+  </adminhtml_reamaze_admin_reports>
+  <adminhtml_reamaze_admin_kb>
     <reference name="head">
       <action method="addJs">
         <script>reamaze/jquery.min.js</script>
@@ -133,8 +133,8 @@
     <reference name="content">
       <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main" template="reamaze/reamaze/dashboard.phtml" />
     </reference>
-  </reamaze_reamaze_adminhtml_main_kb>
-  <reamaze_reamaze_adminhtml_main_contacts>
+  </adminhtml_reamaze_admin_kb>
+  <adminhtml_reamaze_admin_contacts>
     <reference name="head">
       <action method="addJs">
         <script>reamaze/jquery.min.js</script>
@@ -158,8 +158,8 @@
     <reference name="content">
       <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main" template="reamaze/reamaze/dashboard.phtml" />
     </reference>
-  </reamaze_reamaze_adminhtml_main_contacts>
-  <reamaze_reamaze_adminhtml_main_settings>
+  </adminhtml_reamaze_admin_contacts>
+  <adminhtml_reamaze_admin_settings>
     <reference name="head">
       <action method="addJs">
         <script>reamaze/jquery.min.js</script>
@@ -183,8 +183,8 @@
     <reference name="content">
       <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main" template="reamaze/reamaze/dashboard.phtml" />
     </reference>
-  </reamaze_reamaze_adminhtml_main_settings>
-  <reamaze_reamaze_adminhtml_main_setup>
+  </adminhtml_reamaze_admin_settings>
+  <adminhtml_reamaze_admin_setup>
     <reference name="head">
       <action method="addJs">
         <script>reamaze/jquery.min.js</script>
@@ -208,5 +208,5 @@
     <reference name="content">
       <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main_setup" template="reamaze/reamaze/setup.phtml" />
     </reference>
-  </reamaze_reamaze_adminhtml_main_setup>
+  </adminhtml_reamaze_admin_setup>
 </layout>

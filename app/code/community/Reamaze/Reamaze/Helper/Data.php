@@ -30,7 +30,8 @@ class Reamaze_Reamaze_Helper_Data extends Mage_Core_Helper_Data {
 
   private static $dashboardConversations = array(
     'unresolved' => 'Unresolved Conversations',
-    'assigned_to_me' => 'Conversations Assigned To Me'
+    'assigned_to_me' => 'Conversations Assigned To Me',
+    'awaiting' => 'Conversations Awaiting'
   );
 
   public function getAccountName($store = null) {
@@ -60,7 +61,7 @@ class Reamaze_Reamaze_Helper_Data extends Mage_Core_Helper_Data {
   }
 
   public function getSetupCallbackUrl() {
-    return Mage::helper('adminhtml')->getUrl('reamaze_reamaze/Adminhtml_main/setupCallback');
+    return Mage::helper('adminhtml')->getUrl('adminhtml/reamaze_admin/setupCallback');
   }
 
   public function getEnabledDashboardCharts($store = null) {

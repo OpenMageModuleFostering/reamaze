@@ -14,7 +14,7 @@
       <children>
         <dashboard translate="title" module="reamaze_reamaze">
           <title>Dashboard</title>
-          <action>reamaze_reamaze/Adminhtml_main/dashboard</action>
+          <action>adminhtml/reamaze_admin/dashboard</action>
           <sort_order>0</sort_order>
           <depends>
             <config>reamaze_reamaze/setup_completed</config>
@@ -22,7 +22,7 @@
         </dashboard>
         <reports translate="title" module="reamaze_reamaze">
           <title>Reports</title>
-          <action>reamaze_reamaze/Adminhtml_main/reports</action>
+          <action>adminhtml/reamaze_admin/reports</action>
           <sort_order>1</sort_order>
           <depends>
             <config>reamaze_reamaze/setup_completed</config>
@@ -30,7 +30,7 @@
         </reports>
         <kb translate="title" module="reamaze_reamaze">
           <title>Knowledge Base</title>
-          <action>reamaze_reamaze/Adminhtml_main/kb</action>
+          <action>adminhtml/reamaze_admin/kb</action>
           <sort_order>2</sort_order>
           <depends>
             <config>reamaze_reamaze/setup_completed</config>
@@ -38,7 +38,7 @@
         </kb>
         <contacts translate="title" module="reamaze_reamaze">
           <title>Contacts</title>
-          <action>reamaze_reamaze/Adminhtml_main/contacts</action>
+          <action>adminhtml/reamaze_admin/contacts</action>
           <sort_order>3</sort_order>
           <depends>
             <config>reamaze_reamaze/setup_completed</config>
@@ -46,7 +46,7 @@
         </contacts>
         <settings translate="title" module="reamaze_reamaze">
           <title>Settings</title>
-          <action>reamaze_reamaze/Adminhtml_main/settings</action>
+          <action>adminhtml/reamaze_admin/settings</action>
           <sort_order>4</sort_order>
           <depends>
             <config>reamaze_reamaze/setup_completed</config>
@@ -54,7 +54,7 @@
         </settings>
         <setup translate="title" module="reamaze_reamaze">
           <title>Setup</title>
-          <action>reamaze_reamaze/Adminhtml_main/setup</action>
+          <action>adminhtml/reamaze_admin/setup</action>
           <sort_order>1</sort_order>
           <depends>
             <config>reamaze_reamaze/setup_incomplete</config>

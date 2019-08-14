@@ -24,7 +24,7 @@ class Reamaze_Reamaze_Block_Adminhtml_System_Config_RunSetupButton extends Mage_
       ->setData(array(
           'html_id'   => 'run-setup',
           'label'     => $originalData['button_label'],
-          'onclick'   => "window.location.href='" . Mage::helper("adminhtml")->getUrl('reamaze_reamaze/Adminhtml_main/setup') . "'"
+          'onclick'   => "window.location.href='" . Mage::helper("adminhtml")->getUrl('adminhtml/reamaze_admin/setup') . "'"
         )
       );
 

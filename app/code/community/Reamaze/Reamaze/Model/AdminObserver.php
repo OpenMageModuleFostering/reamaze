@@ -69,7 +69,10 @@ class Reamaze_Reamaze_Model_AdminObserver {
 
               switch ($conversations_id) {
                 case 'unresolved':
-                  $conversationsBlock->setData('filter', 'unresolved');
+                  $conversationsBlock->setData('filter', 'open');
+                  break;
+                case 'awaiting':
+                  $conversationsBlock->setData('filter', 'awaiting');
                   break;
                 case 'assigned_to_me':
                   $conversationsBlock->setData('filter', 'me');

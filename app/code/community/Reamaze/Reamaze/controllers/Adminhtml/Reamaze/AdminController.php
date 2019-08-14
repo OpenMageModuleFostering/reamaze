@@ -5,11 +5,11 @@
  * @author Reamaze
  */
 
-class Reamaze_Reamaze_Adminhtml_MainController extends Mage_Adminhtml_Controller_Action {
+class Reamaze_Reamaze_Adminhtml_Reamaze_AdminController extends Mage_Adminhtml_Controller_Action {
 
   /**
    * Init actions
-   * @return Reamaze_Reamaze_adminhtml_MainController
+   * @return Reamaze_Reamaze_adminhtml_Reamaze_AdminController
    */
   protected function _initAction() {
     $this->loadLayout()
@@ -67,6 +67,6 @@ class Reamaze_Reamaze_Adminhtml_MainController extends Mage_Adminhtml_Controller
     Mage::getModel('core/config')->saveConfig('reamaze_reamaze/setup_incomplete', false);
     Mage::getConfig()->reinit();
 
-    $this->getResponse()->setBody('<html><body><script>top.location.href="' . Mage::helper('adminhtml')->getUrl('reamaze_reamaze/Adminhtml_main/dashboard') . '";</script></body></html>');
+    $this->getResponse()->setBody('<html><body><script>top.location.href="' . Mage::helper('adminhtml')->getUrl('adminhtml/reamaze_admin/dashboard') . '";</script></body></html>');
   }
 }
