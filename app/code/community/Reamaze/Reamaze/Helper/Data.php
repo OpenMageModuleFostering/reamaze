@@ -34,12 +34,12 @@ class Reamaze_Reamaze_Helper_Data extends Mage_Core_Helper_Data {
     return Mage::getStoreConfig(self::XML_PATH_ACCOUNT_NAME, $store);
   }
 
-  public function getSSOKey($store = null) {
-    return Mage::getStoreConfig(self::XML_PATH_SSO_KEY, $store);
+  public function getSSOKey() {
+    return Mage::getStoreConfig(self::XML_PATH_SSO_KEY);
   }
 
-  public function getAuthKey($userId, $store = null) {
-    return hash('sha256', $userId . ':' . $this->getSSOKey($store));
+  public function getAuthKey($userId, $userEmail) {
+    return hash_hmac('sha256', $userId . ':' . $userEmail, $this->getSSOKey());
   }
 
   public function getDomain() {

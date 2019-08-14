@@ -10,12 +10,13 @@
         var _baseUrl = "https://<?php echo Mage::helper('reamaze_reamaze')->getAccountName()?>.<?php echo Mage::helper('reamaze_reamaze')->getDomain(); ?>";
         var _user = {
           "id": "<?php echo Mage::getSingleton('admin/session')->getUser()->getId(); ?>",
-          "authkey": "<?php echo Mage::helper('reamaze_reamaze')->getAuthKey(Mage::getSingleton('admin/session')->getUser()->getId()); ?>",
+          "email": "<?php echo Mage::getSingleton('admin/session')->getUser()->getEmail(); ?>",
+          "authkey": "<?php echo Mage::helper('reamaze_reamaze')->getAuthKey(Mage::getSingleton('admin/session')->getUser()->getId(), Mage::getSingleton('admin/session')->getUser()->getEmail()); ?>",
           "parent_url": window.location.href
         };
 
         var url = _baseUrl + '/admin/reports/<?php echo $this->getData("chart_id"); ?>' + '?' + $jq.param({sso: _user, widget: 1, app: 'magento'});
-        var embedEle = $jq('<iframe/>').attr({width: "100%", src: url, scrolling: "no", frameborder: "0", allowtransparency: "true", name: "_widget_chart_" + '<?php echo $this->getData("chart_id"); ?>'});
+        var embedEle = $jq('<iframe/>').attr({style: "min-height: 400px;", width: "100%", src: url, scrolling: "no", frameborder: "0", allowtransparency: "true", name: "_widget_chart_" + '<?php echo $this->getData("chart_id"); ?>'});
         $chartContainer.html(embedEle);
 
         $jq.receiveMessage(function(e) {

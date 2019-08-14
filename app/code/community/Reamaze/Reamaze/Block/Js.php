@@ -24,7 +24,7 @@ class Reamaze_Reamaze_Block_Js extends Mage_Core_Block_Template {
         'id'    => $customer->getId(),
         'email' => $customer->getEmail(),
         'name' => $customer->getName(),
-        'authkey' => $reamazeHelper->getAuthKey($customer->getId()),
+        'authkey' => $reamazeHelper->getAuthKey($customer->getId(), $customer->getEmail()),
         'data' => $customerData
       );
     }
@@ -48,18 +48,20 @@ class Reamaze_Reamaze_Block_Js extends Mage_Core_Block_Template {
   {
     $data = array();
 
-    $customerTotals = Mage::getResourceModel('sales/sale_collection')
-      ->setCustomerFilter($customer)
-      ->load()
-      ->getTotals();
+    try {
+      $customerTotals = Mage::getResourceModel('sales/sale_collection')
+        ->setCustomerFilter($customer)
+        ->load()
+        ->getTotals();
 
-    if ($customerLifetimeSales = $customerTotals->getLifetime()) {
-      $data['Total Sales'] = Mage::helper('core')->formatCurrency($customerLifetimeSales, false);
-    }
+      if ($customerLifetimeSales = $customerTotals->getLifetime()) {
+        $data['Total Sales'] = Mage::helper('core')->formatCurrency($customerLifetimeSales, false);
+      }
 
-    if ($customerAvgSale = $customerTotals->getAvgSale()) {
-      $data['Avg Sale'] = Mage::helper('core')->formatCurrency($customerAvgSale, false);
-    }
+      if ($customerAvgSale = $customerTotals->getAvgSale()) {
+        $data['Avg Sale'] = Mage::helper('core')->formatCurrency($customerAvgSale, false);
+      }
+    } catch (Exception $e) {}
 
     $customerPrimaryBillingAddress = $customer->getPrimaryBillingAddress();
 
