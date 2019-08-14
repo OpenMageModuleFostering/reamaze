@@ -7,11 +7,17 @@
  */
 -->
 <config>
+  <tabs>
+    <reamaze translate="label" module="reamaze_reamaze">
+      <label>Reamaze</label>
+      <sort_order>300</sort_order>
+    </reamaze>
+  </tabs>
   <sections>
     <reamaze_reamaze>
       <class>separator-top</class>
-      <label>Reamaze</label>
-      <tab>general</tab>
+      <label>Settings</label>
+      <tab>reamaze</tab>
       <frontend_type>text</frontend_type>
       <sort_order>500</sort_order>
       <show_in_default>1</show_in_default>
