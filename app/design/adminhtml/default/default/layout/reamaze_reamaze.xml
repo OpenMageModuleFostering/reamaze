@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * backend layout
+ *
+ * @author Reamaze
+ */
+-->
+<layout>
+  <adminhtml_dashboard_index>
+    <reference name="head">
+      <action method="addJs">
+        <script>reamaze/jquery.min.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.migrate.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.ba-postmessage.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.deparam.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.noConflict.js</script>
+      </action>
+      <action method="addCss">
+        <script>reamaze/dashboard.css</script>
+      </action>
+    </reference>
+  </adminhtml_dashboard_index>
+  <adminhtml_customer_edit>
+    <reference name="head">
+      <action method="addJs">
+        <script>reamaze/jquery.min.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.migrate.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.ba-postmessage.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.deparam.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.noConflict.js</script>
+      </action>
+      <action method="addCss">
+        <script>reamaze/dashboard.css</script>
+      </action>
+    </reference>
+    <reference name="customer_edit_tabs">
+      <block type="reamaze_reamaze/adminhtml_customer_edit_tab_conversations" name="reamaze_customer_conversations_view" template="reamaze/reamaze/adminhtml_customer_edit_tab_conversations.phtml" />
+      <action method="addTab">
+        <name>conversations</name>
+        <block>reamaze_customer_conversations_view</block>
+        <afterTab>account</afterTab>
+      </action>
+    </reference>
+  </adminhtml_customer_edit>
+  <reamaze_reamaze_adminhtml_main_dashboard>
+    <reference name="head">
+      <action method="addJs">
+        <script>reamaze/jquery.min.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.migrate.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.ba-postmessage.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.deparam.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.noConflict.js</script>
+      </action>
+      <action method="addCss">
+        <script>reamaze/dashboard.css</script>
+      </action>
+    </reference>
+    <reference name="content">
+      <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main" template="reamaze/reamaze/dashboard.phtml" />
+    </reference>
+  </reamaze_reamaze_adminhtml_main_dashboard>
+  <reamaze_reamaze_adminhtml_main_reports>
+    <reference name="head">
+      <action method="addJs">
+        <script>reamaze/jquery.min.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.migrate.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.ba-postmessage.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.deparam.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.noConflict.js</script>
+      </action>
+      <action method="addCss">
+        <script>reamaze/dashboard.css</script>
+      </action>
+    </reference>
+    <reference name="content">
+      <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main" template="reamaze/reamaze/dashboard.phtml" />
+    </reference>
+  </reamaze_reamaze_adminhtml_main_reports>
+  <reamaze_reamaze_adminhtml_main_kb>
+    <reference name="head">
+      <action method="addJs">
+        <script>reamaze/jquery.min.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.migrate.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.ba-postmessage.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.deparam.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.noConflict.js</script>
+      </action>
+      <action method="addCss">
+        <script>reamaze/dashboard.css</script>
+      </action>
+    </reference>
+    <reference name="content">
+      <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main" template="reamaze/reamaze/dashboard.phtml" />
+    </reference>
+  </reamaze_reamaze_adminhtml_main_kb>
+  <reamaze_reamaze_adminhtml_main_contacts>
+    <reference name="head">
+      <action method="addJs">
+        <script>reamaze/jquery.min.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.migrate.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.ba-postmessage.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.deparam.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.noConflict.js</script>
+      </action>
+      <action method="addCss">
+        <script>reamaze/dashboard.css</script>
+      </action>
+    </reference>
+    <reference name="content">
+      <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main" template="reamaze/reamaze/dashboard.phtml" />
+    </reference>
+  </reamaze_reamaze_adminhtml_main_contacts>
+  <reamaze_reamaze_adminhtml_main_settings>
+    <reference name="head">
+      <action method="addJs">
+        <script>reamaze/jquery.min.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.migrate.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.ba-postmessage.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.deparam.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.noConflict.js</script>
+      </action>
+      <action method="addCss">
+        <script>reamaze/dashboard.css</script>
+      </action>
+    </reference>
+    <reference name="content">
+      <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main" template="reamaze/reamaze/dashboard.phtml" />
+    </reference>
+  </reamaze_reamaze_adminhtml_main_settings>
+  <reamaze_reamaze_adminhtml_main_setup>
+    <reference name="head">
+      <action method="addJs">
+        <script>reamaze/jquery.min.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.migrate.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.ba-postmessage.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.deparam.js</script>
+      </action>
+      <action method="addJs">
+        <script>reamaze/jquery.noConflict.js</script>
+      </action>
+      <action method="addCss">
+        <script>reamaze/dashboard.css</script>
+      </action>
+    </reference>
+    <reference name="content">
+      <block type="reamaze_reamaze/adminhtml_main" name="reamaze_main_setup" template="reamaze/reamaze/setup.phtml" />
+    </reference>
+  </reamaze_reamaze_adminhtml_main_setup>
+</layout>

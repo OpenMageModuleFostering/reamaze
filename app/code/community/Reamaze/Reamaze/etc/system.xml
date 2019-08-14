@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Admin configuration section config
+ *
+ * @author Reamaze
+ */
+-->
+<config>
+  <sections>
+    <reamaze_reamaze>
+      <class>separator-top</class>
+      <label>Reamaze</label>
+      <tab>general</tab>
+      <frontend_type>text</frontend_type>
+      <sort_order>500</sort_order>
+      <show_in_default>1</show_in_default>
+
+      <groups>
+        <account translate="label">
+          <label>Account Settings</label>
+          <sort_order>10</sort_order>
+          <show_in_default>1</show_in_default>
+          <expanded>1</expanded>
+          <fields>
+            <account_name translate="label">
+              <label>Account Name</label>
+              <validate>required-entry</validate>
+              <sort_order>10</sort_order>
+              <comment>
+                This is the same as the subdomain of your account. For example, if your account is mystore.reamaze.com then mystore would be the value you provide here.
+              </comment>
+              <show_in_default>1</show_in_default>
+            </account_name>
+            <sso_key translate="label">
+              <label>Secret SSO Key</label>
+              <validate>required-entry</validate>
+              <sort_order>20</sort_order>
+              <comment>This is the key used to authenticate users with Reamaze. You can find this key in the Settings -> Website Integration section in Reamaze.</comment>
+              <show_in_default>1</show_in_default>
+            </sso_key>
+            <setup_button translate="button_label">
+              <label></label>
+              <button_label>Run Quick Setup</button_label>
+              <frontend_model>reamaze_reamaze/adminhtml_system_config_RunSetupButton</frontend_model>
+              <sort_order>100</sort_order>
+              <show_in_default>1</show_in_default>
+            </setup_button>
+            <help_me translate="label">
+              <label></label>
+              <frontend_model>reamaze_reamaze/adminhtml_system_config_HelpMe</frontend_model>
+              <sort_order>101</sort_order>
+              <show_in_default>1</show_in_default>
+            </help_me>
+          </fields>
+        </account>
+        <adminhtml_dashboard_widgets translate="label">
+          <label>Magento Admin Dashboard Widgets</label>
+          <sort_order>20</sort_order>
+          <show_in_default>1</show_in_default>
+          <fields>
+            <charts translate="label">
+              <label>Report Charts</label>
+              <frontend_type>multiselect</frontend_type>
+              <source_model>reamaze_reamaze/adminhtml_system_config_source_DashboardCharts</source_model>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <can_be_empty>1</can_be_empty>
+              <comment>Dashboard Charts must be enabled for the report charts to work (Configuration -> Advanced -> Admin -> Dashboard -> Enable Charts).</comment>
+            </charts>
+            <conversations translate="label">
+              <label>Conversation Lists</label>
+              <frontend_type>multiselect</frontend_type>
+              <source_model>reamaze_reamaze/adminhtml_system_config_source_DashboardConversations</source_model>
+              <sort_order>20</sort_order>
+              <show_in_default>1</show_in_default>
+              <can_be_empty>1</can_be_empty>
+            </conversations>
+          </fields>
+        </adminhtml_dashboard_widgets>
+        <integration>
+          <label>Website Integration</label>
+          <sort_order>30</sort_order>
+          <show_in_default>1</show_in_default>
+          <fields>
+            <js_popup_trigger translate="label">
+              <label>Support Popup Trigger</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>10</sort_order>
+              <show_in_default>1</show_in_default>
+              <comment>This is the CSS selector that matches the link for which you want to trigger the Reamaze Support Popup.&lt;br/&gt;
+                For example, if the trigger is &lt;span style="font-weight:bold;color:#d14;padding:2px 3px;background-color:#f5f5f5;border:1px solid rgba(0, 0, 0, 0.15);"&gt;#support-link&lt;/span&gt;, the following HTML would trigger the popup and can be placed anywhere on your site.&lt;br/&gt;
+                &lt;span style="display:block;margin:5px 0;padding:3px 5px;background-color:#f5f5f5;border:1px solid rgba(0, 0, 0, 0.15);"&gt;&amp;lt;a href="#" id="support-link"&amp;gt;Get Support&amp;lt;/a&amp;gt;&lt;/span&gt;
+                You can use any CSS selector to match the corresponding HTML (e.g. IDs, classes, etc.)</comment>
+            </js_popup_trigger>
+            <js_embed_container translate="label">
+              <label>Knowledge Base Container</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>11</sort_order>
+              <show_in_default>1</show_in_default>
+              <comment>This is the CSS selector that matches an HTML element which will contain the Knowledge Base.&lt;br/&gt;
+                For example, if the CSS selector entered is &lt;span style="font-weight:bold;color:#d14;padding:2px 3px;background-color:#f5f5f5;border:1px solid rgba(0, 0, 0, 0.15);"&gt;#reamaze-kb&lt;/span&gt;, the Knowledge Base will be dropped in to the following HTML placed on a page:&lt;br/&gt;
+                &lt;span style="display:block;margin:5px 0;padding:3px 5px;background-color:#f5f5f5;border:1px solid rgba(0, 0, 0, 0.15);"&gt;&amp;lt;div id="reamaze-kb"&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+              </comment>
+            </js_embed_container>
+          </fields>
+        </integration>
+      </groups>
+    </reamaze_reamaze>
+  </sections>
+</config>

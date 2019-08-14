@@ -1,0 +1,33 @@
+<script type="text/javascript">
+  $jq(function() {
+    varienGlobalEvents.attachEventHandler('showTab', function(e) {
+      var $chartContainer = $jq("#rmz-user-conversations");
+
+      if (e.tab &&
+          $jq(e.tab).is('#customer_info_tabs_conversations') &&
+          !$chartContainer.children('iframe').length) {
+
+        var _baseUrl = "https://<?php echo Mage::helper('reamaze_reamaze')->getAccountName()?>.<?php echo Mage::helper('reamaze_reamaze')->getDomain(); ?>";
+        var _user = {
+          "id": "<?php echo Mage::getSingleton('admin/session')->getUser()->getId(); ?>",
+          "authkey": "<?php echo Mage::helper('reamaze_reamaze')->getAuthKey(Mage::getSingleton('admin/session')->getUser()->getId()); ?>",
+          "parent_url": window.location.href
+        };
+
+        var url = _baseUrl + '/admin/users' + '?' + $jq.param({external_ref: '<?php echo $this->getCustomer()->getId(); ?>', sso: _user, widget: 1, app: 'magento'});
+        var embedEle = $jq('<iframe/>').attr({width: "100%", src: url, scrolling: "no", frameborder: "0", allowtransparency: "true", name: "_widget_user_conversations"});
+        $chartContainer.html(embedEle);
+
+        $jq.receiveMessage(function(e) {
+          var msgAr = $jq.deparam(e.data);
+          var frame = $jq('iframe[name="' + msgAr._name + '"]');
+          if (frame.length) {
+            frame.height(msgAr._height);
+          }
+        }, _baseUrl);
+      }
+    });
+  });
+</script>
+
+<div id="rmz-user-conversations"></div>

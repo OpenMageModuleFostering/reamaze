@@ -1,0 +1,29 @@
+<div style="margin-top: 5px;">
+  <a class="contact-reamaze" href="javascript:;">Contact Support</a> | <a href="http://reamaze.reamaze.com/" target="_blank">Knowledge Base</a>
+</div>
+<script type="text/javascript">
+  var _support = {
+    account: 'reamaze',
+    ui: {
+      type: 'popup',
+      trigger: '.contact-reamaze'
+    }
+  }
+</script>
+
+<script>
+  (function() {
+    function async_load() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript'; s.async = true;
+      s.src = '<?php echo $this->getData("js_path"); ?>';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+    if (window.attachEvent) {
+      window.attachEvent('onload', async_load);
+    } else {
+      window.addEventListener('load', async_load, false);
+    }
+  })();
+</script>

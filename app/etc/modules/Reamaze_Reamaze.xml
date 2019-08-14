@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Module initial config
+ * @author Reamaze
+ */
+-->
+<config>
+  <modules>
+    <Reamaze_Reamaze>
+      <active>true</active>
+      <codePool>community</codePool>
+      <depends>
+        <Mage_Adminhtml />
+      </depends>
+    </Reamaze_Reamaze>
+  </modules>
+</config>

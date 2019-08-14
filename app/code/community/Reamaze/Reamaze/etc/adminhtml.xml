@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Admin config
+ *
+ * @author Reamaze
+ */
+-->
+<config>
+  <menu>
+    <reamaze translate="title" module="reamaze_reamaze">
+      <title>Reamaze</title>
+      <sort_order>65</sort_order>
+      <children>
+        <dashboard translate="title" module="reamaze_reamaze">
+          <title>Dashboard</title>
+          <action>reamaze_reamaze/Adminhtml_main/dashboard</action>
+          <sort_order>0</sort_order>
+          <depends>
+            <config>reamaze_reamaze/setup_completed</config>
+          </depends>
+        </dashboard>
+        <reports translate="title" module="reamaze_reamaze">
+          <title>Reports</title>
+          <action>reamaze_reamaze/Adminhtml_main/reports</action>
+          <sort_order>1</sort_order>
+          <depends>
+            <config>reamaze_reamaze/setup_completed</config>
+          </depends>
+        </reports>
+        <kb translate="title" module="reamaze_reamaze">
+          <title>Knowledge Base</title>
+          <action>reamaze_reamaze/Adminhtml_main/kb</action>
+          <sort_order>2</sort_order>
+          <depends>
+            <config>reamaze_reamaze/setup_completed</config>
+          </depends>
+        </kb>
+        <contacts translate="title" module="reamaze_reamaze">
+          <title>Contacts</title>
+          <action>reamaze_reamaze/Adminhtml_main/contacts</action>
+          <sort_order>3</sort_order>
+          <depends>
+            <config>reamaze_reamaze/setup_completed</config>
+          </depends>
+        </contacts>
+        <settings translate="title" module="reamaze_reamaze">
+          <title>Settings</title>
+          <action>reamaze_reamaze/Adminhtml_main/settings</action>
+          <sort_order>4</sort_order>
+          <depends>
+            <config>reamaze_reamaze/setup_completed</config>
+          </depends>
+        </settings>
+        <setup translate="title" module="reamaze_reamaze">
+          <title>Setup</title>
+          <action>reamaze_reamaze/Adminhtml_main/setup</action>
+          <sort_order>1</sort_order>
+          <depends>
+            <config>reamaze_reamaze/setup_incomplete</config>
+          </depends>
+        </setup>
+      </children>
+    </reamaze>
+  </menu>
+  <acl>
+    <resources>
+      <admin>
+        <children>
+          <reamaze translate="title" module="reamaze_reamaze">
+            <title>Reamaze</title>
+            <sort_order>65</sort_order>
+            <children>
+              <dashboard translate="title">
+                <title>Dashboard</title>
+                <sort_order>0</sort_order>
+              </dashboard>
+              <reports translate="title">
+                <title>Reports</title>
+                <sort_order>1</sort_order>
+              </reports>
+              <kb translate="title">
+                <title>Knowledge Base</title>
+                <sort_order>2</sort_order>
+              </kb>
+              <contacts translate="title">
+                <title>Contacts</title>
+                <sort_order>3</sort_order>
+              </contacts>
+              <settings translate="title">
+                <title>Settings</title>
+                <sort_order>4</sort_order>
+              </settings>
+              <setup translate="title">
+                <title>Setup</title>
+                <sort_order>10</sort_order>
+              </setup>
+            </children>
+          </reamaze>
+          <system>
+            <children>
+              <config>
+                <children>
+                  <reamaze_reamaze translate="title" module="reamaze_reamaze">
+                    <title>Reamaze</title>
+                  </reamaze_reamaze>
+                </children>
+              </config>
+            </children>
+          </system>
+        </children>
+      </admin>
+    </resources>
+  </acl>
+</config>

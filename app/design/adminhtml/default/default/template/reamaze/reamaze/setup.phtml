@@ -1,0 +1,19 @@
+<script type="text/javascript">
+  $jq(function() {
+    var _baseUrl = "https://<?php echo Mage::helper('reamaze_reamaze')->getDomain(); ?>";
+
+    var url = _baseUrl + '/extensions/magento_setup?' + $jq.param({cb: '<?php echo Mage::helper("reamaze_reamaze")->getSetupCallbackUrl(); ?>', parent_url: '<?php echo Mage::helper("core/url")->getCurrentUrl(); ?>'});
+    var embedEle = $jq('<iframe/>').attr({width: "100%", src: url, scrolling: "no", frameborder: "0", allowtransparency: "true", name: "_embed"});
+    $jq("#reamaze-setup").append(embedEle);
+
+    $jq.receiveMessage(function(e) {
+      var msgAr = $jq.deparam(e.data);
+      var frame = $jq('iframe[name="' + msgAr._name + '"]');
+      if (frame.length) {
+        frame.height(msgAr._height);
+      }
+    }, _baseUrl);
+  });
+</script>
+
+<div id="reamaze-setup"></div>
