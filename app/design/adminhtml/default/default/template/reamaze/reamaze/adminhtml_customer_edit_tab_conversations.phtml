@@ -15,7 +15,7 @@
           "parent_url": window.location.href
         };
 
-        var url = _baseUrl + '/admin/users' + '?' + $jq.param({external_ref: '<?php echo $this->getCustomer()->getId(); ?>', sso: _user, widget: 1, app: 'magento'});
+        var url = _baseUrl + '/admin/users' + '?' + $jq.param({customer: {friendly_name: '<?php echo $this->getCustomer()->getFirstname(); ?>', name: '<?php echo $this->getCustomer()->getName(); ?>', logins_attributes: [{email: '<?php echo $this->getCustomer()->getEmail(); ?>'}]}, external_ref: '<?php echo $this->getCustomer()->getId(); ?>', sso: _user, widget: 1, app: 'magento'});
         var embedEle = $jq('<iframe/>').attr({style: "min-height: 400px;", width: "100%", src: url, scrolling: "no", frameborder: "0", allowtransparency: "true", name: "_widget_user_conversations"});
         $chartContainer.html(embedEle);
 
@@ -30,5 +30,4 @@
     });
   });
 </script>
-
 <div id="rmz-user-conversations"></div>

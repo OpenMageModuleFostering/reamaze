@@ -12,7 +12,9 @@
       if (frame.length) {
         frame.height(msgAr._height);
       }
-    }, _baseUrl);
+    }, function(source_origin) {
+      return source_origin == _baseUrl || !!source_origin.match(/:\/\/.*?\.<?php echo Mage::helper('reamaze_reamaze')->getDomain(); ?>$/)
+    });
   });
 </script>
 
