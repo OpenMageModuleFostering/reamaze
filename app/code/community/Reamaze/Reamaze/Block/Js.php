@@ -38,7 +38,8 @@ class Reamaze_Reamaze_Block_Js extends Mage_Core_Block_Template {
       ),
       'mailbox' => array(
         'enabled' => false
-      )
+      ),
+      'widget' => true
     );
 
     return Mage::helper('core')->jsonEncode($support);
