@@ -22,7 +22,10 @@ class Reamaze_Reamaze_Helper_Data extends Mage_Core_Helper_Data {
   private static $dashboardCharts = array(
     'response_time' => 'Response Time',
     'volume' => 'Response Volume',
-    'staff' => 'Staff Response'
+    'staff' => 'Staff Response',
+    'appreciations' => 'Appreciations',
+    'first_response_rate' => 'First Response Resolve Rate',
+    'thread_size' => 'Average Thread Size'
   );
 
   private static $dashboardConversations = array(
@@ -43,7 +46,7 @@ class Reamaze_Reamaze_Helper_Data extends Mage_Core_Helper_Data {
   }
 
   public function getDomain() {
-    return Mage::getStoreConfig('reamaze_reamaze/domain');
+    return 'lantirn.dev'; // Mage::getStoreConfig('reamaze_reamaze/domain');
   }
 
   public function getUrlForPath($path = '/') {
