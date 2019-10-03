@@ -1,18 +1,5 @@
 {
-    "name": "OpenMageModuleFostering/Reamaze",
-    "type": "magento-module",
-    "license": "Apache-License-v2.0",
-    "homepage": "",
-    "description": "Lightweight, Lightspeed Help Desk.
-Email, Social, Live Chat.
-Integrated Into Your Site",
-    "authors": [
-    {
-        "name": "Reamaze",
-        "email": "support@reamaze.com"
-    }
-],
-    "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+    "keywords": [
+        "openmage-module"
+    ]
 }
